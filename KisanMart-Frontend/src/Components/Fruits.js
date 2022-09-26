@@ -56,6 +56,7 @@ const Fruits = () => {
                 <div className="row g-3">
                     {fruits.map((item) => (
                         <div className="col-4">
+                            <br/>
                             <div className="card " key={item.id}>
                                 <div onClick={() => history.push(`/product/${item.id}`)}>
 
@@ -72,6 +73,7 @@ const Fruits = () => {
                     ))}
                 </div>
                 </div>
+                <br/>
                 <Footer/>
             </div>
         </>

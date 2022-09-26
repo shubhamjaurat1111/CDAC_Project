@@ -15,6 +15,7 @@ const Products = () => {
     const [name, setname] = useState(pname);
     const history = useHistory();
     const token = JSON.parse(localStorage.getItem("jwttoken"));
+    
     const HandleAddCart = (productId) => {
         if (token) {
             const itemcart = {
@@ -29,6 +30,7 @@ const Products = () => {
                 .catch(error => {
                     console.log('Something went wrong', error);
                 });
+                  
         }
         else {
             alert("please Login First")

@@ -65,6 +65,7 @@ public class OrderServiceimpl implements IorderService{
 					productrepo.save(p);
 			}
 	}
+		order.setUser(iuserrepo.findByEmail(email).orElseThrow());
 		iorderrepo.save(order);
 		
 	}

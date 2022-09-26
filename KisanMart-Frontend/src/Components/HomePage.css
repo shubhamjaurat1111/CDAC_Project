@@ -13,7 +13,7 @@
  
   .dynamicc_text h1{
     position: relative;
-   animation: slide 4s steps(210) infinite; 
+   animation: slide 4s steps(210) infinite;
   }
   @keyframes slide {
     100%{

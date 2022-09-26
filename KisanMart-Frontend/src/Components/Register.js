@@ -53,7 +53,7 @@ const Register = () => {
           <div className="row">
             <div className="mb-3 col px-5">
               <label htmlFor="fname" className="form-label">
-                First Name <span><sup className="require">*</sup></span>
+                First Name<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="text"
@@ -67,7 +67,7 @@ const Register = () => {
             </div>
             <div className="mb-3 col px-5">
               <label htmlFor="lname" className="form-label">
-                Last Name<span><sup className="require">*</sup></span>
+                Last Name<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="text"
@@ -83,7 +83,7 @@ const Register = () => {
           <div className="row">
             <div className="mb-3 col px-5">
               <label htmlFor="email" className="form-label">
-                Email{" "}<span><sup className="require">*</sup></span>
+                Email{" "}<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="email"
@@ -98,7 +98,7 @@ const Register = () => {
             </div>
             <div className="mb-3 col px-5">
               <label htmlFor="contact" className="form-label">
-                Contact{" "}
+                Contact{" "}<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ const Register = () => {
           <div className="row">
             <div className="mb-3 col px-5">
               <label htmlFor="password" className="form-label">
-                Password
+                Password<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="password"
@@ -129,7 +129,7 @@ const Register = () => {
             </div>
             <div className="mb-3 col px-5">
               <label htmlFor="cpassword" className="form-label">
-                Confirm Password
+                Confirm Password<spam><sup className="require">*</sup></spam>
               </label>
               <input
                 type="password"
@@ -145,7 +145,7 @@ const Register = () => {
           <div className="row">
             <div className="mb-3 col px-5">
               <label htmlFor="city" className="form-label">
-                Role
+                Role<spam><sup className="require">*</sup></spam>
               </label>
               <select
                 name="roles"
@@ -174,7 +174,7 @@ const Register = () => {
               }}
             />
             <label htmlFor="tc" className="form-label">
-              Term And Conditions
+              Term And Conditions<spam><sup className="require">*</sup></spam>
             </label>
           </div>
           <button

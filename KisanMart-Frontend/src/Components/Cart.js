@@ -1,8 +1,10 @@
 import axios from "axios";
+import "./Cart.css";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { url } from "./Common/constants";
 import Footer from "./Footer/Footer";
+
 const Cart = () => {
   const history = useHistory();
   let total = 0;
@@ -10,7 +12,7 @@ const Cart = () => {
   const [items, setitems] = useState([]);
   const [user, setuser] = useState("");
   const token = JSON.parse(localStorage.getItem("jwttoken"));
-
+  localStorage.setItem("cartitems", items.length);
   const HandleOrder = () => {
     localStorage.setItem("Total", total);
     console.log(localStorage.getItem("Total"));
@@ -64,6 +66,7 @@ const Cart = () => {
   }, []);
 
   const init = () => {
+    
     axios
       .get(url + "/getcartproducts", {
         headers: { authorization: `Bearer ${token}` },
@@ -84,6 +87,8 @@ const Cart = () => {
       .catch((error) => {
         console.log("Something went wrong", error);
       });
+      
+      
   };
 
   return (
@@ -106,8 +111,9 @@ const Cart = () => {
           <div className="col-2">rate</div>
           <div className="col-2">Total Price</div>
         </div>
+        
         {items.map((item) => (
-          <div className="row g-1 border border-4" key={item.id}>
+        <div className="row g-1 border border-4" key={item.id}>
             <div className="col-1">
               <img src={item.imageUrl} height={25} width={25} />
             </div>

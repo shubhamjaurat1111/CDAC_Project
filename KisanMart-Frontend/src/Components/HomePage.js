@@ -13,8 +13,6 @@ import { url } from "./Common/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer/Footer";
-import { Typewriter } from "typewriter-effect";
-
 
 const HomePage = () => {
     const history = useHistory();
@@ -68,26 +66,9 @@ const HomePage = () => {
             <div className="container" >
             <div className="dynamicc_text align-items-center bgg_about">
                 <br></br>
-                  <div id="effect">
-                  <h1 ><b> Welcome to Kisan Mart</b></h1>
-                  </div>
-                <br></br>
-                </div>
-               {/* <div className="text"> 
-               <Typewriter
-                        options = {{
-                            autoStart:true,
-                            loop: true,
-                            delay:40,
-                            strings:[
-                                "Welcome to Kisan Mart",
-                                "Welcome to Kisan Mart",
-                                "Welcome to Kisan Mart",
-                            ],
-                        }}
-                    />
-               </div> */}
-               
+                  <h1 ><b>Welcome to Kisan Mart</b></h1>
+                    <br></br>
+               </div>
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         
@@ -261,6 +242,7 @@ const HomePage = () => {
                 </div>
 
             </div>
+            <br/>
             <Footer/>
             </div>
         </>

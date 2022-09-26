@@ -56,6 +56,7 @@ const Grocery = () => {
                 <div className="row g-3">
                     {grocery.map((item) => (
                         <div className="col-4">
+                            <br/>
                             <div className="card " key={item.id}>
                                 <div onClick={() => history.push(`/product/${item.id}`)}>
 
@@ -73,6 +74,7 @@ const Grocery = () => {
                 </div>
                 
             </div>
+            <br/>
             <Footer/>
             </div>
         </>

@@ -3,6 +3,7 @@ import {CgProfile} from 'react-icons/cg'
 import {FcSearch} from 'react-icons/fc'
 import { Link } from 'react-router-dom';
 import logo from "../../images/img5.png"
+import "../../Components/Cart.css";
 import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { url } from '../Common/constants';
@@ -12,6 +13,7 @@ const Navbar = () => {
 const history=useHistory();
 const [pname, setname] = useState("")
 const [profiles,setprofiles] = useState("")
+   const count1=localStorage.getItem("cartitems");
     const token=JSON.parse(localStorage.getItem("jwttoken"));
     const [loginbutton, setloginbutton] = useState("");
     const HandleCart = () => {
@@ -49,6 +51,7 @@ const [profiles,setprofiles] = useState("")
         else{
             setloginbutton("Login/Register")
         }
+        
     }
 useEffect(() => {
   init();
@@ -92,7 +95,8 @@ useEffect(() => {
                             <button className=" btn btn-outline-secondary mx-3" onClick={HandleLoginLogout}>{loginbutton}</button>
                         </li>
                         <li className="nav-item">
-                        <button className="btn  mx-3" onClick={HandleCart}><MdOutlineShoppingCart></MdOutlineShoppingCart>Cart</button>
+                        <button className="btn  mx-3" onClick={HandleCart}><MdOutlineShoppingCart></MdOutlineShoppingCart>Cart<sup className='KK-o3G'>{count1}</sup></button>
+                        
                         </li>
                         <li className="nav-item">
                             <div className='fs-5'><CgProfile/></div>

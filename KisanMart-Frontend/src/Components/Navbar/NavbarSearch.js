@@ -7,10 +7,12 @@ const NavbarSearch = () => {
     const history = useHistory();
     const token = JSON.parse(localStorage.getItem("jwttoken"));
     const [loginbutton, setloginbutton] = useState("");
+   const count1=localStorage.getItem("cartitems");
     const HandleCart = () => {
         console.log(token);
         if (token) {
             history.push("/cart");
+            
         }
         else {
             alert("Please Login First")
@@ -76,7 +78,7 @@ useEffect(() => {
                             <button className=" btn btn-outline-secondary mx-3" onClick={HandleLoginLogout}>{loginbutton}</button>
                         </li>
                         <li className="nav-item">
-                        <button className="btn  mx-3" onClick={HandleCart}><MdOutlineShoppingCart></MdOutlineShoppingCart>Cart</button>
+                        <button className="btn  mx-3" onClick={HandleCart}><MdOutlineShoppingCart></MdOutlineShoppingCart>Cart<sup className='KK-o3G'>{count1}</sup></button>
                         </li>
                     </ul>
                 </div>

@@ -151,7 +151,7 @@ const AddProduct = () => {
               <input
                 type="number"
                 className="form-control"
-                id="qty"
+                id="qty" placeholder="kg/litre"
                 value={quantity}
                 onChange={(e) => {
                   setquantity(e.target.value);
@@ -165,7 +165,7 @@ const AddProduct = () => {
               <input
                 type="number"
                 className="form-control"
-                id="rate"
+                id="rate" placeholder="in rupees ₹"
                 value={rate}
                 onChange={(e) => {
                   setrate(e.target.value);
